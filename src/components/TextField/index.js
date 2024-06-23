@@ -1,11 +1,11 @@
 
-const TextField = (props) => {
+const TextField = ({label, onChange, mandatory,placeholder, value}) => {
 
 
     return (
         <div>
-            <label>{props.label}</label>
-            <input onChange={event => props.onChange(event.target.value)} required={props.mandatory} placeholder={props.placeholder}/>
+            <label>{label}</label>
+            <input onChange={event => onChange(event.target.value)} required={mandatory} placeholder={placeholder} value={value}/>
         </div>
     )
 }
