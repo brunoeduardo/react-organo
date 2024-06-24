@@ -1,0 +1,29 @@
+.player-form-content {
+    background: #F6F6F6;
+    padding: 35px 95px;
+}
+
+.player-form-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.36px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.player-form-column {
+    display: flex;
+}
+
+.player-form-column>div {
+    width: 50%;
+}
+
+.player-form-column>div:first-child {
+    padding-right: 5px;
+}
+
+.player-form-button {
+    display: flex;
+    justify-content: left;
+}

@@ -37,7 +37,9 @@ function App () {
     'Center'
   ]
 
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([
+    {name: 'bruno', image: 'url/image', position: 'pointer guard', team: 'New York Knicks'}
+    ]);
 
   const setNewPlayer = (newPlayer) => {
     setPlayers([...players,newPlayer])

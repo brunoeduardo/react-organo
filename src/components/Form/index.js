@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./Form.css"
 import Button from "../Button"
 import DropDownList from "../DropDownList"
 import TextField from "../TextField"
@@ -20,14 +21,20 @@ const Form = ({teams, positions, setNewPlayer}) => {
     const [team, setTeam] = useState('');
     
     return (
-        <section>
-            <form onSubmit={onSave}>
-                <h2>Fill in the form with the player's name, position and image</h2>
-                <TextField label='Name' placeholder='Write name' mandatory={true} value={name} onChange={value => setName(value)}></TextField>
-                <DropDownList label='Position' list={positions} mandatory={true} value={position} onChange={value => setPosition(value)}></DropDownList>
-                <TextField label='Image' placeholder='Write image url' mandatory={true} value={image} onChange={value => setImage(value)}></TextField>
-                <DropDownList label='Team' list={teams} mandatory={true} value={team} onChange={value => setTeam(value)}></DropDownList>
-                <Button>Add</Button>
+        <section className="player-form-container">
+            <form onSubmit={onSave} className="player-form-content">
+                <h2 className="player-form-title">Fill in the form with the player's name, position and image</h2>
+                <div className="player-form-column">
+                    <TextField label='Name' placeholder='Write name' mandatory={true} value={name} onChange={value => setName(value)}></TextField>
+                    <DropDownList label='Position' list={positions} mandatory={true} value={position} onChange={value => setPosition(value)}></DropDownList>
+                </div>
+                <div className="player-form-column">
+                    <TextField label='Image' placeholder='Write image url' mandatory={true} value={image} onChange={value => setImage(value)}></TextField>
+                    <DropDownList label='Team' list={teams} mandatory={true} value={team} onChange={value => setTeam(value)}></DropDownList>
+                </div>
+                <div className="player-form-button">
+                    <Button>Create card</Button>
+                </div>
             </form>
         </section>
     )

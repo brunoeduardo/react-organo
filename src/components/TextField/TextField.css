@@ -1,0 +1,27 @@
+.text-field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.text-field-label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.text-field-input {
+    border: 1px solid #e2dfdf;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.text-field-input::placeholder {
+    color: #000;
+    opacity: 1;
+}
