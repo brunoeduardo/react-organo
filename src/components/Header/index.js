@@ -1,4 +1,6 @@
-export const Banner = () => {
+import  './Header.css'
+
+export const Header = () => {
     return(
         <header className="banner-container">
             <img src="/images/banner.png" alt="Organo main banner" />
@@ -6,4 +8,4 @@ export const Banner = () => {
     )
 }
 
-export default Banner
+export default Header

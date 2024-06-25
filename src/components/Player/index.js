@@ -1,10 +1,12 @@
-const Player = ({image, name, position}) => {
+import "./Player.css"
+
+const Player = ({image, name, position, primaryColor}) => {
     return (
-        <div>
-            <div>
+        <div className="card-container" style={{background: primaryColor}}>
+            <div className="card-image">
                 <img src={image} alt={"Player " + name } />
             </div>
-            <div>
+            <div className="card-text">
                 <h4>{name}</h4>
                 <h5>{position}</h5>
             </div>
@@ -13,6 +15,3 @@ const Player = ({image, name, position}) => {
 }
 
 export default Player
-
-
-// https://cdn.nba.com/headshots/nba/latest/1040x760/1626164.png
