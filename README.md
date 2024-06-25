@@ -1,14 +1,3 @@
 # Creating a chart basketball teams project with React 
 
-Some text....
-
-## title h2
-
-some text....
-
-### title h3
-
-some text....
-
-
-**Note: some note here!**
+To study the use of React, I created this project based on a course in React and pure JavaScript, applying the use of components to build the page. 
