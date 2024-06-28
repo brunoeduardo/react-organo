@@ -59,13 +59,15 @@ function App () {
       name: 'Bruno',
       position: 'Center',
       team: 'New York Knicks',
-      image:'///'
+      image:'///',
+      favorite: true
 
     }
   ]);
 
   const setNewPlayer = (newPlayer) => {
     newPlayer.id = uuidv4();
+    newPlayer.favorite =  false
     setPlayers([...players,newPlayer])
   }
 
@@ -92,6 +94,14 @@ function App () {
     setTeams([...teams,team])
   }
 
+  const changeFavorite = (id) => {
+    setPlayers(players.map(player => {
+      if(player.id === id) {
+        player.favorite = !player.favorite
+      }
+      return player
+    }) )
+  }
 
   return (
     <div className='app-container'>
@@ -116,6 +126,7 @@ function App () {
             players={players.filter(player => player.team === team.name)} 
             onDelete={deletePLayer}  
             changeColor={changeTeamColor}
+            onFavorite={changeFavorite}
           ></Team>
         ))} 
       </div>

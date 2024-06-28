@@ -4,7 +4,7 @@
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    height: 270px;
+    height: 280px;
     margin: 0 10px;
     padding: 30px;
     position: relative;
@@ -66,4 +66,8 @@
     position: absolute;
     right: -8px;
     top: -8px;
+}
+
+.player-favorite {
+    margin-top: 10px
 }

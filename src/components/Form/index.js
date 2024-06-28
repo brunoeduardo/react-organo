@@ -2,8 +2,8 @@ import { useState } from "react"
 import "./Form.css"
 import Button from "../Button"
 import DropDownList from "../DropDownList"
-import TextField from "../TextField"
-import InputColor from "../InputColor"
+import InputField from "../InputField"
+
 
 const Form = ({teams, positions, setNewPlayer, setNewTeam}) => {
     
@@ -31,28 +31,27 @@ const Form = ({teams, positions, setNewPlayer, setNewTeam}) => {
     const [teamColor, setTeamColor] = useState('#eeeeee');
     
     return (
-        <section className="player-form-container">
-            <form onSubmit={onSave} className="player-form-content">
-                <h2 className="player-form-title">Fill in the form with the player's name, position and image</h2>
-                <div className="player-form-column">
-                    <TextField label='Name' placeholder='Write name' mandatory={true} value={name} onChange={value => setName(value)}></TextField>
+        <section className="form-container">
+            <form onSubmit={onSave} className="form-content">
+                <h2 className="form-title">Fill in the form with the player's name, position and image</h2>
+                    <InputField label='Name' placeholder='Write name' mandatory={true} value={name} onChange={value => setName(value)}></InputField>
                     <DropDownList label='Position' list={positions} mandatory={true} value={position} onChange={value => setPosition(value)}></DropDownList>
-                </div>
-                <div className="player-form-column">
-                    <TextField label='Image' placeholder='Write image url' mandatory={true} value={image} onChange={value => setImage(value)}></TextField>
+
+
+                    <InputField label='Image' placeholder='Write image url' mandatory={true} value={image} onChange={value => setImage(value)}></InputField>
                     <DropDownList label='Team' list={teams} mandatory={true} value={team} onChange={value => setTeam(value)}></DropDownList>
-                </div>
-                <div className="player-form-button">
+
+                <div className="form-button">
                     <Button>Create card</Button>
                 </div>
             </form>
-            <form onSubmit={onSaveTeam} className="player-form-content">
-                <h2 className="player-form-title">Fill the form to create a team</h2>
-                <div className="player-form-column">
-                    <TextField label='Team name' placeholder='Write team name' mandatory={true} value={teamName} onChange={value => setTeamName(value)}></TextField>
-                    <InputColor label='Color' value={teamColor} onChange={value => setTeamColor(value)}></InputColor> 
-                </div>
-                <div className="player-form-button">
+            <form onSubmit={onSaveTeam} className="form-content">
+                <h2 className="form-title">Fill the form to create a team</h2>
+
+                    <InputField label='Team name' placeholder='Write team name' mandatory={true} value={teamName} onChange={value => setTeamName(value)}></InputField>
+                    <InputField type={'color'} label='Color' value={teamColor} onChange={value => setTeamColor(value)}></InputField> 
+
+                <div className="form-button">
                     <Button>Create team</Button>
                 </div>
             </form>
