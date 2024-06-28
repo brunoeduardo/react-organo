@@ -1,0 +1,20 @@
+.input-color-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.input-color-label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+.input-color-field {
+    border: 1px solid #e2dfdf;
+    height: 100%;
+    width: 100%;
+}

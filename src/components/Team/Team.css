@@ -28,5 +28,10 @@
 .team-color {
     position: absolute;
     top: 20px;
-    right: 20px
+    right: 20px;
+    width: 50px;
+}
+
+.team-color .input-color-field {
+    height: 25px;
 }

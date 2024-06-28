@@ -1,13 +1,15 @@
 import "./Team.css"
 import Player from '../Player'
 import hexToRgba from 'hex-to-rgba';
-
+import InputColor from "../InputColor"
 
 const Team = ({id, name, players, color, onDelete, changeColor}) => {
   return (
     players.length > 0 && 
     <section className='team-container' style={{ backgroundColor: hexToRgba(color, .2)}}>
-      <input type="color" className="team-color" value={color} onChange={event => changeColor(event.target.value, id)}></input>
+      <div className="team-color">
+        <InputColor value={color} onChange={value => changeColor(value, id)}></InputColor> 
+      </div>
       <h3 className="team-title">
         {name}
         <hr className="team-title-boder" style={{ borderColor: color}}/>

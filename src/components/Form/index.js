@@ -5,7 +5,7 @@ import DropDownList from "../DropDownList"
 import TextField from "../TextField"
 import InputColor from "../InputColor"
 
-const Form = ({teams, positions, setNewPlayer}) => {
+const Form = ({teams, positions, setNewPlayer, setNewTeam}) => {
     
     const onSave = (event) => {
         event.preventDefault()
@@ -16,12 +16,19 @@ const Form = ({teams, positions, setNewPlayer}) => {
         setTeam('')
     }
 
+    const onSaveTeam = (event) => {
+        event.preventDefault()
+        setTeamName('')
+        setTeamColor('#eeeeee')
+        setNewTeam({teamName, teamColor})
+    }
+
     const [name, setName] = useState('');
     const [position, setPosition] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
     const [teamName, setTeamName] = useState('');
-    const [teamColor, setTeamColor] = useState('');
+    const [teamColor, setTeamColor] = useState('#eeeeee');
     
     return (
         <section className="player-form-container">
@@ -39,11 +46,11 @@ const Form = ({teams, positions, setNewPlayer}) => {
                     <Button>Create card</Button>
                 </div>
             </form>
-            <form onSubmit={onSave} className="player-form-content">
+            <form onSubmit={onSaveTeam} className="player-form-content">
                 <h2 className="player-form-title">Fill the form to create a team</h2>
                 <div className="player-form-column">
                     <TextField label='Team name' placeholder='Write team name' mandatory={true} value={teamName} onChange={value => setTeamName(value)}></TextField>
-                    {/* <InputColor label='Color' value={teamColor} onChange={value => setTeamColor(value)}></InputColor> */}
+                    <InputColor label='Color' value={teamColor} onChange={value => setTeamColor(value)}></InputColor> 
                 </div>
                 <div className="player-form-button">
                     <Button>Create team</Button>

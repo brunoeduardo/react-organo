@@ -84,9 +84,14 @@ function App () {
   }
 
   const setNewTeam = (newTeam) => {
-    newTeam.id = uuidv4();
-    setTeams([...teams,newTeam])
+    const team = {
+      id:  uuidv4(), 
+      name: newTeam.teamName,
+      color: newTeam.teamColor
+    }
+    setTeams([...teams,team])
   }
+
 
   return (
     <div className='app-container'>
