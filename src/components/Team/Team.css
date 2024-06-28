@@ -1,5 +1,6 @@
 .team-container {
     padding: 35px;
+    position: relative;
 }
 
 .team-title {
@@ -22,4 +23,10 @@
 .team-player-content {
     display: flex;
     flex-wrap: wrap;
+}
+
+.team-color {
+    position: absolute;
+    top: 20px;
+    right: 20px
 }

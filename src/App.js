@@ -4,45 +4,46 @@ import Form from './components/Form'
 import Header from './components/Header'
 import Team from './components/Team'
 import { useState } from "react"
+import { v4 as uuidv4 } from 'uuid';
 
 function App () {
-  const teams = [
+  const [teams, setTeams] = useState([
     {
+      id: uuidv4(),
       name: 'New York Knicks',
-      primaryColor: '#ff8a29',
-      secundaryColor: '#ffeedf'
+      color: '#ff8a29'
     },
     {
+      id: uuidv4(),
       name: 'Boston Celtics',
-      primaryColor: '#008248',
-      secundaryColor: '#66cb9e'
+      color: '#008248'
     },
     {
+      id: uuidv4(),
       name: 'Miami Heat',
-      primaryColor: '#98002e',
-      secundaryColor: '#fa5d8c'
+      color: '#98002e'
     },
     {
+      id: uuidv4(),
       name: 'Orlando Magic',
-      primaryColor: '#0075bd',
-      secundaryColor: '#44aced'
+      color: '#0075bd'
     },
     {
+      id: uuidv4(),
       name: 'Dallas Mavericks',
-      primaryColor: '#007ec6',
-      secundaryColor: '#419dd1'
+      color: '#007ec6'
     },
     {
+      id: uuidv4(),
       name: 'Los Angeles Lakers',
-      primaryColor: '#fdb927',
-      secundaryColor: '#fedc92'
+      color: '#fdb927'
     },
     {
+      id: uuidv4(),
       name: 'Denver Nuggets',
-      primaryColor: '#051c3e',
-      secundaryColor: '#5685c9'
+      color: '#051c3e'
     }
-  ]
+  ])
 
   const positions = [
     'Point guard',
@@ -52,23 +53,65 @@ function App () {
     'Center'
   ]
 
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([
+    {
+      id: uuidv4(),
+      name: 'Bruno',
+      position: 'Center',
+      team: 'New York Knicks',
+      image:'///'
+
+    }
+  ]);
 
   const setNewPlayer = (newPlayer) => {
+    newPlayer.id = uuidv4();
     setPlayers([...players,newPlayer])
+  }
+
+  const deletePLayer = (playerId) => {
+    setPlayers(players.filter(element => element.id !== playerId))
+  }
+
+  const changeTeamColor = (color, teamId) => {
+    setTeams(teams.map((element) => {
+      if(element.id === teamId) {
+        element.color = color
+      }
+      return element
+    })
+    )
+  }
+
+  const setNewTeam = (newTeam) => {
+    newTeam.id = uuidv4();
+    setTeams([...teams,newTeam])
   }
 
   return (
     <div className='app-container'>
       <div className='app-content'>
       <Header></Header>
-      <Form teams={teams.map(team => team.name)} positions={positions} setNewPlayer={newPlayer => setNewPlayer(newPlayer)}></Form>
+      <Form 
+        teams={teams.map(team => team.name)} 
+        positions={positions} 
+        setNewPlayer={newPlayer => setNewPlayer(newPlayer)}
+        setNewTeam={newTeam => setNewTeam(newTeam)}
+      ></Form>
 
       
       {players.length > 0 ? 
       <div>
         {teams.map(team => (
-          <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secundaryColor={team.secundaryColor} players={players.filter(player => player.team === team.name)}></Team>
+          <Team 
+            key={team.id} 
+            id={team.id}
+            name={team.name} 
+            color={team.color} 
+            players={players.filter(player => player.team === team.name)} 
+            onDelete={deletePLayer}  
+            changeColor={changeTeamColor}
+          ></Team>
         ))} 
       </div>
       : <div className='app-no-teams-container'>No teams createad</div>

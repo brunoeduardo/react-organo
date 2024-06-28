@@ -3,6 +3,7 @@ import "./Form.css"
 import Button from "../Button"
 import DropDownList from "../DropDownList"
 import TextField from "../TextField"
+import InputColor from "../InputColor"
 
 const Form = ({teams, positions, setNewPlayer}) => {
     
@@ -19,6 +20,8 @@ const Form = ({teams, positions, setNewPlayer}) => {
     const [position, setPosition] = useState('');
     const [image, setImage] = useState('');
     const [team, setTeam] = useState('');
+    const [teamName, setTeamName] = useState('');
+    const [teamColor, setTeamColor] = useState('');
     
     return (
         <section className="player-form-container">
@@ -34,6 +37,16 @@ const Form = ({teams, positions, setNewPlayer}) => {
                 </div>
                 <div className="player-form-button">
                     <Button>Create card</Button>
+                </div>
+            </form>
+            <form onSubmit={onSave} className="player-form-content">
+                <h2 className="player-form-title">Fill the form to create a team</h2>
+                <div className="player-form-column">
+                    <TextField label='Team name' placeholder='Write team name' mandatory={true} value={teamName} onChange={value => setTeamName(value)}></TextField>
+                    {/* <InputColor label='Color' value={teamColor} onChange={value => setTeamColor(value)}></InputColor> */}
+                </div>
+                <div className="player-form-button">
+                    <Button>Create team</Button>
                 </div>
             </form>
         </section>

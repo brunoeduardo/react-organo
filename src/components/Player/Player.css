@@ -1,4 +1,4 @@
-.card-container {
+.player-container {
     align-items: center;
     background: #a5a5a5;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
@@ -11,7 +11,11 @@
     width: 260px;
 }
 
-.card-container::before {
+.player-container:hover .player-delete {
+    display: block;
+}
+
+.player-container::before {
     background: #fff;
     content: '';
     display: block;
@@ -21,7 +25,7 @@
     width: 100%;
 }
 
-.card-image {
+.player-image {
     border-radius: 50%;
     background: #eeeeee;
     height: 120px;
@@ -30,18 +34,18 @@
     z-index: 1;
 }
 
-.card-image img {
+.player-image img {
     margin-left: calc(50% - 80px);
     margin-top: 5px;
     width: 160px;
 }
 
-.card-text {
+.player-text {
     margin-top: 20px;
     z-index: 1;
 }
 
-.card-text h4 {
+.player-text h4 {
     font-size: 18px;
     font-weight: 600;
     line-height: 21.94px;
@@ -49,9 +53,17 @@
     text-align: center;
 }
 
-.card-text h5 {
+.player-text h5 {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.5px;
     text-align: center;
+}
+
+.player-delete {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: -8px;
+    top: -8px;
 }
