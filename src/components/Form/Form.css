@@ -35,3 +35,21 @@
     display: flex;
     justify-content: left;
 }
+
+.show-form-container {
+    display: flex;
+}
+
+.show-form-container .show-form-button {
+    background: #eee;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    flex: 1;
+    padding: 15px;
+}
+
+.show-form-container .show-form-button:hover,
+.show-form-container .show-form-button.active {
+    background: #444444;
+    color: #fff;
+}

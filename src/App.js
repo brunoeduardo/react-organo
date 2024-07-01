@@ -53,17 +53,7 @@ function App () {
     'Center'
   ]
 
-  const [players, setPlayers] = useState([
-    {
-      id: uuidv4(),
-      name: 'Bruno',
-      position: 'Center',
-      team: 'New York Knicks',
-      image:'///',
-      favorite: true
-
-    }
-  ]);
+  const [players, setPlayers] = useState([]);
 
   const setNewPlayer = (newPlayer) => {
     newPlayer.id = uuidv4();
