@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import Form from './components/Form'
 import Header from './components/Header'
 import Team from './components/Team'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
 
 function App () {
@@ -31,7 +31,7 @@ function App () {
     {
       id: uuidv4(),
       name: 'Dallas Mavericks',
-      color: '#007ec6'
+      color: '#004973'
     },
     {
       id: uuidv4(),
@@ -46,10 +46,8 @@ function App () {
   ])
 
   const positions = [
-    'Point guard',
-    'Shooting guard',
-    'Small forward',
-    'Power forward',
+    'Guard',
+    'Forward',
     'Center'
   ]
 
@@ -92,6 +90,16 @@ function App () {
       return player
     }) )
   }
+
+  useEffect(()=> {
+    fetch('http://localhost:3333/data')
+      .then(result => result.json())
+      .then(data => {
+        setPlayers(data)
+      }).catch(() => {
+        console.log('Mock Api off')
+      })
+  }, [])
 
   return (
     <div className='app-container'>

@@ -23,6 +23,7 @@
 .team-player-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .team-color {

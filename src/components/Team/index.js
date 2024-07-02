@@ -17,7 +17,7 @@ const Team = ({id, name, players, color, onDelete, changeColor, onFavorite}) => 
       <div className="team-player-content">
         {players.map(player => (
           <Player 
-            key={player.name} 
+            key={player.id} 
             id={player.id} 
             name={player.name} 
             position={player.position} 

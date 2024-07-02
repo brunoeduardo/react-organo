@@ -1,0 +1,140 @@
+{
+    "data": [
+        {
+            "id": "488f3e27-59b8-409f-8911-5bf5552f76c5",
+            "name": "Jalen Brunson",
+            "position": "Guard",
+            "team": "New York Knicks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628973.png",
+            "favorite": false
+        },
+        {
+            "id": "0964c251-ef14-4236-a0da-56d8ef52fc33",
+            "name": "OG Anunoby",
+            "position": "Forward",
+            "team": "New York Knicks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628384.png",
+            "favorite": false
+        },
+        {
+            "id": "ff8340d3-fbbc-4760-a139-ef0368918f20",
+            "name": "Josh Hart",
+            "position": "Guard",
+            "team": "New York Knicks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628404.png",
+            "favorite": false
+        },
+        {
+            "id": "9800c5e5-fa34-4ad8-9c61-d6d683b382e8",
+            "name": "Julius Randle",
+            "position": "Forward",
+            "team": "New York Knicks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/203944.png",
+            "favorite": false
+        },
+        {
+            "id": "abee7f16-44ef-4a57-b2c3-b118926331c5",
+            "name": "Derrick White",
+            "position": "Guard",
+            "team": "Boston Celtics",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628401.png",
+            "favorite": false
+        },
+        {
+            "id": "6f41e1c5-6dab-4a9f-8550-13c761f3bfed",
+            "name": "Jayson Tatum",
+            "position": "Forward",
+            "team": "Boston Celtics",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png",
+            "favorite": false
+        },
+        {
+            "id": "238f9d86-c669-4c7e-8aec-6cb96b477d38",
+            "name": "Jaylen Brown",
+            "position": "Guard",
+            "team": "Boston Celtics",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627759.png",
+            "favorite": false
+        },
+        {
+            "id": "b508501b-666e-438d-82a4-efae96c81809",
+            "name": "Jimmy Butler",
+            "position": "Forward",
+            "team": "Miami Heat",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/202710.png",
+            "favorite": false
+        },
+        {
+            "id": "a01763b9-f908-4a64-b1e4-6b6bcc1f098e",
+            "name": "Tyler Herro",
+            "position": "Guard",
+            "team": "Miami Heat",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629639.png",
+            "favorite": false
+        },
+        {
+            "id": "731f2974-4f1d-4045-8ac7-6820746f6363",
+            "name": "Paolo Banchero",
+            "position": "Forward",
+            "team": "Orlando Magic",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1631094.png",
+            "favorite": false
+        },
+        {
+            "id": "83476153-9fd2-4308-a8c1-5a316b9eadbe",
+            "name": "Anthony Black",
+            "position": "Guard",
+            "team": "Orlando Magic",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641710.png",
+            "favorite": false
+        },
+        {
+            "id": "9b10a6b5-12df-45a1-92ed-1e61efb78f07",
+            "name": "Luka Doncic",
+            "position": "Forward",
+            "team": "Dallas Mavericks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png",
+            "favorite": false
+        },
+        {
+            "id": "d7f7ab45-398d-4e80-afec-b21d6461e2e2",
+            "name": "Kyrie Irving",
+            "position": "Guard",
+            "team": "Dallas Mavericks",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png",
+            "favorite": false
+        },
+        {
+            "id": "50218bb6-ce48-4d4c-9a19-2c7c0c4d8831",
+            "name": "LeBron James",
+            "position": "Forward",
+            "team": "Los Angeles Lakers",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+            "favorite": false
+        },
+        {
+            "id": "35db5d1a-36e1-44d9-9447-9d6f62fb4196",
+            "name": "Anthony Davis",
+            "position": "Center",
+            "team": "Los Angeles Lakers",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/203076.png",
+            "favorite": false
+        },
+        {
+            "id": "8b8f5f49-d1cb-4e59-8ce6-e70ede6aa5e3",
+            "name": "Nikola Jokic",
+            "position": "Guard",
+            "team": "Denver Nuggets",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png",
+            "favorite": false
+        },
+        {
+            "id": "571a56f2-174a-49d5-8494-62e25ed99192",
+            "name": "Jamal Murray",
+            "position": "Guard",
+            "team": "Denver Nuggets",
+            "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627750.png",
+            "favorite": false
+        }
+    ]
+}
