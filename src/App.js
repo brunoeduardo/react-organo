@@ -92,7 +92,7 @@ function App () {
   }
 
   useEffect(()=> {
-    fetch('http://localhost:3333/data')
+    fetch('https://my-json-server.typicode.com/brunoeduardo/mock-api/organo')
       .then(result => result.json())
       .then(data => {
         setPlayers(data)
